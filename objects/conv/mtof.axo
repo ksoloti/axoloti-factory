@@ -1,7 +1,7 @@
-<objdefs>
-   <obj.normal id="mtof" uuid="ff3acbab734a93d2098a49e1c4c5d1ad10e0e8bf" sha="e815acb07fcb4cab1bce05fdfb98164d1def831f">
+<objdefs appVersion="1.0.12">
+   <obj.normal id="mtof" uuid="ff3acbab734a93d2098a49e1c4c5d1ad10e0e8bf">
       <sDescription>Midi note number to frequency, equal tempered tuning, A=440Hz</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>mtof.axh</helpPatch>
       <inlets>
@@ -14,8 +14,7 @@
       <params/>
       <attribs/>
       <code.krate><![CDATA[int f1;
-MTOF(inlet_pitch,f1);
-outlet_frequency = f1>>4;
-]]></code.krate>
+MTOF(inlet_pitch, f1); /* "MIDI-to-frequency". Usage: MTOF(input, output) */
+outlet_frequency = f1 >> 4;]]></code.krate>
    </obj.normal>
 </objdefs>

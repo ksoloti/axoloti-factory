@@ -1,47 +1,85 @@
-<patch-1.0>
-   <comment type="patch/comment" x="14" y="14" text="mtof = midi note to frequency"/>
-   <obj type="ctrl/dial p" sha="501c30e07dedf3d701e8d0b33c3c234908c3388e" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="14" y="70">
+<patch-1.0 appVersion="1.0.12">
+   <comment type="patch/comment" x="14" y="14" text="&lt;html&gt;&lt;h3&gt;mtof = midi note to frequency"/>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="14" y="70">
       <params>
          <frac32.u.map name="value" value="13.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="conv/mtof" sha="e815acb07fcb4cab1bce05fdfb98164d1def831f" uuid="ff3acbab734a93d2098a49e1c4c5d1ad10e0e8bf" name="mtof_1" x="112" y="70">
+   <obj type="conv/mtof" uuid="ff3acbab734a93d2098a49e1c4c5d1ad10e0e8bf" name="mtof_1" x="98" y="70">
       <params/>
       <attribs/>
    </obj>
-   <obj type="osc/sine lin" sha="3a57035097adb60c79dfabdb4e3a3bd5d47791a1" uuid="76e1fbd4ec919604532ce3cdb304c74aa6fe7c74" name="sine_1" x="266" y="70">
+   <obj type="mux/mux 2" uuid="3bcb8a666381ed18b8962eda50b1aa679136f618" name="mux_1" x="182" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/sine lin" uuid="6a4458d598c9b8634b469d1a6e7f87971b5932f" name="sine_1" x="266" y="70">
       <params>
          <frac32.u.map name="freq" value="0.0"/>
       </params>
       <attribs/>
    </obj>
    <comment type="patch/comment" x="378" y="70" text="&quot;lin&quot; suffix in oscillators means they have a linear frequency input mapping"/>
-   <obj type="ctrl/dial p" sha="501c30e07dedf3d701e8d0b33c3c234908c3388e" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_2" x="14" y="182">
+   <comment type="patch/comment" x="378" y="98" text="&lt;- &quot;freq&quot; inlet"/>
+   <obj type="disp/scope 128 b trig" uuid="11747dcd1dc9afe4919f537c861fb18b80b4e4e" name="scope_1" x="644" y="98">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="mtof_on" x="98" y="140">
+      <params>
+         <bool32.tgl name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="182" y="168" text="&lt;html&gt;&lt;h2 style=&quot;background-color:#00AA00;&quot;&gt;&amp;lt;----"/>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_2" x="14" y="182">
       <params>
          <frac32.u.map name="value" value="13.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" uuid="556d54977a43597bf97427ca6c13e3d446859933" name="sine_2" x="266" y="182">
+   <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="sine_2" x="266" y="182">
       <params>
          <frac32.s.map name="pitch" value="0.0"/>
       </params>
       <attribs/>
    </obj>
-   <comment type="patch/comment" x="378" y="190" text="normal oscillators have mtof build-in"/>
+   <comment type="patch/comment" x="378" y="182" text="normal oscillators have mtof conversion built-in"/>
+   <comment type="patch/comment" x="378" y="210" text="&lt;- &quot;pitch&quot; inlet"/>
+   <obj type="disp/scope 128 b trig" uuid="11747dcd1dc9afe4919f537c861fb18b80b4e4e" name="scope_2" x="476" y="210">
+      <params/>
+      <attribs/>
+   </obj>
    <nets>
       <net>
-         <source obj="mtof_1" outlet="frequency"/>
-         <dest obj="sine_1" inlet="freq"/>
-      </net>
-      <net>
          <source obj="dial_1" outlet="out"/>
+         <dest obj="mux_1" inlet="i1"/>
          <dest obj="mtof_1" inlet="pitch"/>
       </net>
       <net>
          <source obj="dial_2" outlet="out"/>
          <dest obj="sine_2" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="sine_1" outlet="wave"/>
+         <dest obj="scope_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="sine_2" outlet="wave"/>
+         <dest obj="scope_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mux_1" outlet="o"/>
+         <dest obj="sine_1" inlet="freq"/>
+      </net>
+      <net>
+         <source obj="mtof_on" outlet="o"/>
+         <dest obj="mux_1" inlet="s"/>
+      </net>
+      <net>
+         <source obj="mtof_1" outlet="frequency"/>
+         <dest obj="mux_1" inlet="i2"/>
       </net>
    </nets>
    <settings>
@@ -49,9 +87,9 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>411</x>
-      <y>339</y>
-      <width>614</width>
+      <x>179</x>
+      <y>146</y>
+      <width>812</width>
       <height>543</height>
    </windowPos>
 </patch-1.0>
