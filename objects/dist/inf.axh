@@ -1,97 +1,131 @@
-<patch-1.0>
-   <obj type="audio/in left" sha="f36683ba4df4704fc1d45058134f1721a25d22f9" name="adc_11" x="28" y="14">
+<patch-1.0 appVersion="1.0.12">
+   <comment type="patch/comment" x="56" y="14" text="Various input signals..."/>
+   <comment type="patch/comment" x="308" y="14" text="EXTREMELY attenuated..."/>
+   <obj type="audio/in left" uuid="d40e60b7641fe75af4d7c91b45bb038aacafc52e" name="adc_11" x="56" y="42">
       <params/>
       <attribs/>
    </obj>
-   <obj type="hipass~" sha="f9059d53a5af0890dc1a1268b5679aa335731857" name="hipass_1" x="98" y="14">
+   <obj type="filter/hp" uuid="7829b56456e975f1d89bda2ad1c7ad678080a73b" name="hp_1" x="168" y="42">
       <params>
-         <frac32.u.map name="freq" value="0.0"/>
+         <frac32.s.map name="pitch" value="-36.0"/>
+         <frac32.u.map name="reso" value="0.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/+c" sha="dd36bdfc156063826c3897754f7ef30fd2895c89" name="c2" x="182" y="14">
+   <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_1" x="308" y="42">
       <params>
-         <frac32.u.map name="c" value="0.05575847625732422"/>
+         <frac32.u.map name="c" value="0.005000000000000001"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc_1" x="56" y="98">
+   <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="osc_1" x="56" y="126">
       <params>
          <frac32.s.map name="pitch" value="43.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="mix/mix 5" sha="2c736847c4b108230551b01d12e0c1893a51cb26" name="mix21" x="336" y="182">
+   <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_2" x="308" y="126">
+      <params>
+         <frac32.u.map name="c" value="0.005000000000000001"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="406" y="154" text="Turning up a signal even a tiny bit gives a full scale signal..."/>
+   <comment type="patch/comment" x="504" y="182" text="Thanks to infinite distortion."/>
+   <obj type="mix/mix 4" uuid="e6f9a0cc7aadc1b89516143cf1ccb79b3538d05a" name="mix_1" x="406" y="210">
       <params>
          <frac32.u.map name="gain1" value="0.0"/>
          <frac32.u.map name="gain2" value="0.0"/>
          <frac32.u.map name="gain3" value="0.0"/>
          <frac32.u.map name="gain4" value="0.0"/>
-         <frac32.u.map name="gain5" value="0.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="dist/inf" sha="3b7380de881bb6eafc05c60b35ae2351855d6c09" name="infclip_1" x="434" y="182">
+   <obj type="dist/inf" uuid="d12af924890d417179e6fdbcf71cb1ec3ba31f67" name="inf_1" x="504" y="210">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/*c" sha="d36ecbd55095f4888a0ebda8efda68e015c5e72b" name="*c1" x="504" y="182">
+   <obj type="math/*c" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="*c_1" x="574" y="210">
       <params>
          <frac32.u.map name="amp" value="4.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="audio/out stereo" sha="b933bb91801a126126313c11f773158b5ca2face" name="dac_1" x="616" y="182">
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="dac_1" x="686" y="210">
       <params/>
       <attribs/>
    </obj>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc_1_" x="56" y="210">
+   <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="osc_1_" x="56" y="238">
       <params>
          <frac32.s.map name="pitch" value="11.995412826538086"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="noise/uniform" sha="117e0adca76d1dc3810e120a06d022ef06093103" name="rand_1" x="56" y="322">
+   <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_3" x="308" y="238">
+      <params>
+         <frac32.u.map name="c" value="0.004999637603759766"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="noise/uniform" uuid="a3926ef22ae9ac217cd09933d90101848796eb78" name="rand_1" x="56" y="350">
       <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_4" x="308" y="350">
+      <params>
+         <frac32.u.map name="c" value="0.004999637603759766"/>
+      </params>
       <attribs/>
    </obj>
    <nets>
       <net>
-         <source obj="*c1" outlet="out"/>
+         <source obj="*c_1" outlet="out"/>
          <dest obj="dac_1" inlet="left"/>
          <dest obj="dac_1" inlet="right"/>
       </net>
       <net>
-         <source obj="infclip_1" outlet="out"/>
-         <dest obj="*c1" inlet="in"/>
+         <source obj="inf_1" outlet="out"/>
+         <dest obj="*c_1" inlet="in"/>
       </net>
       <net>
-         <source obj="mix21" outlet="out"/>
-         <dest obj="infclip_1" inlet="in"/>
-      </net>
-      <net>
-         <source obj="hipass_1" outlet="out"/>
-         <dest obj="c2" inlet="in"/>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="inf_1" inlet="in"/>
       </net>
       <net>
          <source obj="adc_11" outlet="wave"/>
-         <dest obj="hipass_1" inlet="in"/>
-      </net>
-      <net>
-         <source obj="c2" outlet="out"/>
-         <dest obj="mix21" inlet="in1"/>
+         <dest obj="hp_1" inlet="in"/>
       </net>
       <net>
          <source obj="osc_1" outlet="wave"/>
-         <dest obj="mix21" inlet="in2"/>
+         <dest obj="+c_2" inlet="in"/>
       </net>
       <net>
          <source obj="osc_1_" outlet="wave"/>
-         <dest obj="mix21" inlet="in3"/>
+         <dest obj="+c_3" inlet="in"/>
       </net>
       <net>
          <source obj="rand_1" outlet="wave"/>
-         <dest obj="mix21" inlet="in4"/>
+         <dest obj="+c_4" inlet="in"/>
+      </net>
+      <net>
+         <source obj="hp_1" outlet="out"/>
+         <dest obj="+c_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="+c_1" outlet="out"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="+c_2" outlet="out"/>
+         <dest obj="mix_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="+c_3" outlet="out"/>
+         <dest obj="mix_1" inlet="in3"/>
+      </net>
+      <net>
+         <source obj="+c_4" outlet="out"/>
+         <dest obj="mix_1" inlet="in4"/>
       </net>
    </nets>
    <settings>
@@ -99,8 +133,8 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>0</x>
-      <y>2</y>
+      <x>210</x>
+      <y>39</y>
       <width>926</width>
       <height>632</height>
    </windowPos>
