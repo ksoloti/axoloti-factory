@@ -14,7 +14,7 @@
    </obj>
    <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_1" x="308" y="42">
       <params>
-         <frac32.u.map name="c" value="0.005000000000000001"/>
+         <frac32.u.map name="c" value="0.004999637603759766"/>
       </params>
       <attribs/>
    </obj>
@@ -26,7 +26,7 @@
    </obj>
    <obj type="math/+c" uuid="8a7195df16f4695260af58e8072c656181925b4d" name="+c_2" x="308" y="126">
       <params>
-         <frac32.u.map name="c" value="0.005000000000000001"/>
+         <frac32.u.map name="c" value="0.004999637603759766"/>
       </params>
       <attribs/>
    </obj>
@@ -133,8 +133,8 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>210</x>
-      <y>39</y>
+      <x>96</x>
+      <y>71</y>
       <width>926</width>
       <height>632</height>
    </windowPos>
