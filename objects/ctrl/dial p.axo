@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" sha="501c30e07dedf3d701e8d0b33c3c234908c3388e">
-      <upgradeSha>1f21216639bb798a4ea7902940999a5bcfd0de90</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674">
       <sDescription>positive constant value dial</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -14,7 +13,6 @@
          <frac32.u.map name="value" noLabel="true"/>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_out= param_value;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_out = param_value; /* Forward dial parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>

@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" sha="3a0057991a9376823a6a654a8cf7201abdc31135">
-      <upgradeSha>15ee4f76478131dcc3e0ff8d36be5480bdb1b7d4</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f">
       <sDescription>constant boolean, momentary control</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -14,7 +13,6 @@
          <bool32.mom name="b" noLabel="true"/>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_o=param_b;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_o = param_b; /* Forward button parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>

@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="i radio 2 h" uuid="965a945535a206a17296f000802fd0cfaf0e09e0" sha="b8d8c3c7534a44a1e35eda89a316a9b117d2016c">
-      <upgradeSha>8467c36ab01b864409f8db5cf0c4b1776b7932e1</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="i radio 2 h" uuid="965a945535a206a17296f000802fd0cfaf0e09e0">
       <sDescription>positive integer control, horizontal radio buttons</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -16,7 +15,6 @@
          </int32.hradio>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_out= param_value;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_out = param_value; /* Forward radio parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>

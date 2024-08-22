@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="toggle" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" sha="f5742cc9eee76fae90a4e570c34596dd327b6c28">
-      <upgradeSha>a104f377191a424d537741cdfd7d5348bc16590c</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="toggle" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99">
       <sDescription>constant boolean, toggle control</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -14,7 +13,6 @@
          <bool32.tgl name="b" noLabel="true"/>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_o=param_b;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_o = param_b; /* Forward toggle parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>

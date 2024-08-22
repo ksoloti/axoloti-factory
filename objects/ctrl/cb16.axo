@@ -1,8 +1,8 @@
-<objdefs>
-   <obj.normal id="cb16" uuid="fd74594344cc6cd720fa4b473a55cbd15cd360e4" sha="773dda357a5eeb21e4b6dcb55132f015267d4bd1">
-      <upgradeSha>10460eadb48a887eafeedcf4c65933030e4eabdd</upgradeSha>
-      <sDescription>constant from 16 flags</sDescription>
-      <author>Johannes Taelman</author>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="cb16" uuid="fd74594344cc6cd720fa4b473a55cbd15cd360e4">
+      <sDescription>constant from 16 flag bits
+The leftmost checkbox toggles LSB (0x0001), the rightmost toggles MSB (0x8000).</sDescription>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -14,7 +14,6 @@
          <bin16 name="b16" noLabel="true"/>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_o=param_b16;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_o = param_b16; /* Forward cb16 parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>

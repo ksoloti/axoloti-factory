@@ -1,7 +1,7 @@
 <objdefs appVersion="1.0.12">
    <obj.normal id="hook" uuid="39cd40e6f91f43dd1b4285eb769d7cd5613b5709">
-      <sDescription>inlet value passed through after hitting control value</sDescription>
-      <author>Johannes Taelman</author>
+      <sDescription>inlet value is passed through once it passes the control value.</sDescription>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>hook.axh</helpPatch>
       <inlets>
@@ -17,7 +17,7 @@
          <frac32.u.map name="value" noLabel="true"/>
       </params>
       <attribs/>
-      <code.declaration><![CDATA[int32_t nhooked; //0:hooked, 1:gt, 2:lt, 4:unhooked
+      <code.declaration><![CDATA[int32_t nhooked; /* Status. 0: hooked, 1: greater than, 2: less than, 4: unhooked /*
 int32_t param_cache;
 int32_t tunhook;]]></code.declaration>
       <code.init><![CDATA[nhooked = 4;

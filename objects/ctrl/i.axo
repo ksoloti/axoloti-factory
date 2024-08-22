@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="i" uuid="a3786816db6ea5bc6ac4193a5cccdb2c83b83496" sha="b26fac2d686e81abd981a2cb0d2dd3ea2dfba53a">
-      <upgradeSha>f379e2b7efb6169f8e7327be5b09362609656408</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="i" uuid="a3786816db6ea5bc6ac4193a5cccdb2c83b83496">
       <sDescription>positive integer control</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>ctrl.axh</helpPatch>
       <inlets/>
@@ -17,7 +16,6 @@
          </int32>
       </params>
       <attribs/>
-      <code.krate><![CDATA[outlet_out= param_value;
-]]></code.krate>
+      <code.krate><![CDATA[outlet_out = param_value; /* Forward number box parameter value to outlet */]]></code.krate>
    </obj.normal>
 </objdefs>
