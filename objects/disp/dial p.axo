@@ -1,8 +1,7 @@
-<objdefs>
-   <obj.normal id="dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" sha="5a62a6a55b2a4ed72cdc1543ff6d670b9e69ec38">
-      <upgradeSha>5ff4edecce7038619b91d1d056c33eecbc4eaf30</upgradeSha>
+<objdefs appVersion="1.0.12">
+   <obj.normal id="dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5">
       <sDescription>displays positive k-rate signals</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, edits by Ksoloti</author>
       <license>BSD</license>
       <helpPatch>disp.axh</helpPatch>
       <inlets>
@@ -14,7 +13,6 @@
       </displays>
       <params/>
       <attribs/>
-      <code.krate><![CDATA[disp_v=inlet_in;
-]]></code.krate>
+      <code.krate><![CDATA[disp_v = inlet_in; /* Forward inlet value to display */]]></code.krate>
    </obj.normal>
 </objdefs>
