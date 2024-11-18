@@ -49,14 +49,14 @@
          </combo>
          <combo name="boost">
             <MenuEntries>
-               <string>Mute</string>
                <string>0dB</string>
                <string>20dB</string>
+               <string>Mute</string>
             </MenuEntries>
             <CEntries>
-               <string>0</string>
                <string>1</string>
                <string>2</string>
+               <string>0</string>
             </CEntries>
          </combo>
       </attribs>
