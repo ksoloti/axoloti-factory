@@ -595,7 +595,7 @@
    <obj type="pulse/lfsrburst 8" sha="15dc098dc7464595e42a982a7c86798389557f18" name="pulse.lfsrburst8~_1" x="1116" y="1452">
       <params/>
       <attribs>
-         <combo attributeName="polynomial" selection="0x9"/>
+         <combo attributeName="polynomial" selection="0x95"/>
       </attribs>
    </obj>
    <obj type="filter/hp svf" sha="b713b3afdc5ee2c3aaca6ac1b8e343c555c40952" name="filter.lpfsvf~_1" x="1236" y="1452">
