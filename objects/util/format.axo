@@ -40,7 +40,7 @@ Thread *pThd=0;]]></code.declaration>
       <code.krate><![CDATA[if (param_confirm1 && param_confirm2 && !pconfirm){
 	pconfirm = 1;
 	pThd = chThdCreateStatic(waThreadX, sizeof(waThreadX),
-                    NORMALPRIO, (tfunc_t)ThreadX, (void *)this);
+                    NORMALPRIO, (void*) ThreadX, (void *)this);
 } else if (!param_confirm2){
 	pconfirm = 0;
 }

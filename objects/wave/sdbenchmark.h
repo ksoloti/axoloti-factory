@@ -137,5 +137,5 @@ static msg_t ThreadBenchmarkSD(void *arg) {
 static WORKING_AREA(waThreadSD0, 1024) __attribute__ ((section (".data")));
 
 void sdbenchmark(void){
-  sdStreams[0].pThreadSD = chThdCreateStatic(waThreadSD0, sizeof(waThreadSD0), NORMALPRIO, (tfunc_t)ThreadBenchmarkSD, NULL);
+  sdStreams[0].pThreadSD = chThdCreateStatic(waThreadSD0, sizeof(waThreadSD0), NORMALPRIO, (void*) ThreadBenchmarkSD, NULL);
 }

@@ -75,7 +75,7 @@ for(i=0;i<128;i++) inbuf[i]=0;
 for(i=0;i<128;i++) outbuf[i]=0;
 state = 0;
   Thd = chThdCreateStatic(waThreadX, sizeof(waThreadX),
-                    NORMALPRIO, (tfunc_t)ThreadX, (void *)this);
+                    NORMALPRIO, (void*) ThreadX, (void *)this);
 ]]></code.init>
       <code.dispose><![CDATA[chThdTerminate(Thd);
 ]]></code.dispose>
