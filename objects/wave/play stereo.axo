@@ -34,7 +34,7 @@ stream->offset = -1;
 starttrig = 0;
 stoptrig = 0;
 stream->pThreadSD = chThdCreateStatic(waThreadSD, sizeof(waThreadSD),
-                    HIGHPRIO, (void*) ThreadSD, (void *)stream);]]></code.init>
+                    HIGHPRIO, (tfunc_t)ThreadSD, (void *)stream);]]></code.init>
       <code.dispose><![CDATA[sdStopStreamer(stream);]]></code.dispose>
       <code.krate><![CDATA[int32_t i;
 outlet_end = 0;
