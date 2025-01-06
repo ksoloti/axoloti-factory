@@ -1,17 +1,17 @@
-<patch-1.0 appVersion="1.0.8">
-   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keybnote1" x="14" y="14">
+<patch-1.0 appVersion="1.1.0">
+   <obj type="midi/in/keyb note" uuid="ac0cd98e6c0373b7be73d25900342a62ebcf5f" name="keybnote1" x="14" y="14">
       <params/>
       <attribs>
          <spinner attributeName="note" value="60"/>
       </attribs>
    </obj>
-   <obj type="env/d" sha="d9f7cfe1295d7bcc550714a18126d4f73c7c8411" name="d_1" x="210" y="14">
+   <obj type="env/d" uuid="190ae648e41832b41adbedb465317c18a010aefe" name="d_1" x="210" y="14">
       <params>
          <frac32.s.map name="d" onParent="true" value="-20.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="noise/uniform" sha="117e0adca76d1dc3810e120a06d022ef06093103" name="noise.uniform_2" x="322" y="14">
+   <obj type="noise/uniform" uuid="a3926ef22ae9ac217cd09933d90101848796eb78" name="noise.uniform_2" x="322" y="14">
       <params/>
       <attribs/>
    </obj>
@@ -19,25 +19,25 @@
       <params/>
       <attribs/>
    </obj>
-   <obj type="filter/lp1" sha="290a234e2f83eb072198d0158bcd5da02a3606c3" name="filter.lowpass~_1" x="504" y="14">
+   <obj type="filter/lp1" uuid="1b1fd7085e44d2b7b80b59b8d68796b909c1b2cc" name="filter.lowpass~_1" x="504" y="14">
       <params>
          <frac32.s.map name="freq" onParent="true" value="-29.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="env/d lin m x" sha="7cd630c1ecdc64542bf24aadc0f3114629fdf37d" name="env.envdlinmx_1" x="210" y="98">
+   <obj type="env/d lin m" uuid="e9d9a5152981b17626748fd93e7e6a39c0afe3aa" name="d_2" x="210" y="98">
       <params>
          <frac32.s.map name="d" onParent="true" value="-13.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/*c" sha="1ea155bb99343babad87e3ff0de80e6bf568e8da" name="arithmetic.*c_2" x="308" y="98">
+   <obj type="math/*c" uuid="7d5ef61c3bcd571ee6bbd8437ef3612125dfb225" name="arithmetic.*c_2" x="308" y="98">
       <params>
          <frac32.u.map name="amp" onParent="true" value="24.5"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc.sine_1" x="406" y="98">
+   <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="osc.sine_1" x="406" y="98">
       <params>
          <frac32.s.map name="pitch" onParent="true" value="-30.0"/>
       </params>
@@ -51,50 +51,50 @@
       <params/>
       <attribs/>
    </obj>
-   <obj type="patch/outlet a" sha="72226293648dde4dd4739bc1b8bc46a6bf660595" name="bd" x="588" y="168">
+   <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="bd" x="588" y="168">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/c 64" sha="69b493f3d94607d38df5ab951d27622bec162349" name="c_1" x="126" y="280">
+   <obj type="math/c 64" uuid="9116584b9960241e86c12effea4ce12d13871e77" name="c_1" x="126" y="280">
       <params/>
       <attribs/>
    </obj>
-   <obj type="noise/uniform" sha="117e0adca76d1dc3810e120a06d022ef06093103" name="noise.uniform_1" x="308" y="294">
+   <obj type="noise/uniform" uuid="a3926ef22ae9ac217cd09933d90101848796eb78" name="noise.uniform_1" x="308" y="294">
       <params/>
       <attribs/>
    </obj>
-   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keybnote1_" x="14" y="322">
+   <obj type="midi/in/keyb note" uuid="ac0cd98e6c0373b7be73d25900342a62ebcf5f" name="keybnote1_" x="14" y="322">
       <params/>
       <attribs>
          <spinner attributeName="note" value="62"/>
       </attribs>
    </obj>
-   <obj type="math/-" sha="27008b61438fd41bbc9a021b13c5eaad1cc101b5" name="-_1" x="126" y="322">
+   <obj type="math/-" uuid="3280bb759e9fc189e134300e48dda7e903c9a110" name="-_1" x="126" y="322">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/div 2" sha="7fee48a2d38604fd5504303cbccef61f687d1593" name="div_1" x="210" y="336">
+   <obj type="math/div 2" uuid="f14884de1baf3e615e12ee162a96a013eca76789" name="div_1" x="210" y="336">
       <params/>
       <attribs/>
    </obj>
-   <obj type="env/d m" sha="3f6e6c6081782177f0dc9dfe9e50a99b54fe41f6" name="env.decay.m_1" x="294" y="336">
+   <obj type="env/d m" uuid="85e82f54dfc28839d300cda777af8907ae2a28d0" name="env.decay.m_1" x="294" y="336">
       <params>
          <frac32.s.map name="d" onParent="true" value="11.5"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="gain.vca~_1" x="406" y="336">
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="gain.vca~_1" x="406" y="336">
       <params/>
       <attribs/>
    </obj>
-   <obj type="filter/bp svf" sha="ba4ac02f48ae93c7ecc9fac9b0e212cac7c21539" name="filter.bpfsvf~_1" x="490" y="336">
+   <obj type="filter/bp svf" uuid="451629d3f559049e7f516d5014f3d5fa818827c7" name="filter.bpfsvf~_1" x="490" y="336">
       <params>
          <frac32.s.map name="pitch" value="55.0"/>
          <frac32.u.map name="reso" value="23.5"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="patch/outlet a" sha="72226293648dde4dd4739bc1b8bc46a6bf660595" name="snr" x="602" y="336">
+   <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="snr" x="602" y="336">
       <params/>
       <attribs/>
    </obj>
@@ -104,7 +104,7 @@
          <dest obj="abs_1" inlet="in"/>
       </net>
       <net>
-         <source obj="env.envdlinmx_1" outlet="env"/>
+         <source obj="d_2" outlet="env"/>
          <dest obj="*_2" inlet="b"/>
       </net>
       <net>
@@ -130,7 +130,7 @@
       <net>
          <source obj="keybnote1" outlet="gate"/>
          <dest obj="d_1" inlet="trig"/>
-         <dest obj="env.envdlinmx_1" inlet="trig"/>
+         <dest obj="d_2" inlet="trig"/>
       </net>
       <net>
          <source obj="d_1" outlet="env"/>
@@ -138,7 +138,7 @@
       </net>
       <net>
          <source obj="keybnote1" outlet="velocity"/>
-         <dest obj="env.envdlinmx_1" inlet="d"/>
+         <dest obj="d_2" inlet="d"/>
       </net>
       <net>
          <source obj="env.decay.m_1" outlet="env"/>
@@ -192,9 +192,9 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>0</x>
-      <y>2</y>
-      <width>912</width>
-      <height>646</height>
+      <x>-7</x>
+      <y>-7</y>
+      <width>1550</width>
+      <height>848</height>
    </windowPos>
 </patch-1.0>
