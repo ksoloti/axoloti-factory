@@ -1,8 +1,8 @@
-<objdefs appVersion="1.0.11">
+<objdefs appVersion="1.1.0">
    <obj.normal id="format" uuid="511fcd12-757d-423b-a2d1-ffc46911b9d3">
       <sDescription>SDCard formatting - ERASES ALL CONTENTS of the SDCard!
 To activate, turn on confirm1 and click confirm2.</sDescription>
-      <author>Johannes Taelman</author>
+      <author>Johannes Taelman, Ksoloti</author>
       <license>BSD</license>
       <inlets/>
       <outlets/>
@@ -23,7 +23,7 @@ bool ready;
 
 msg_t ThreadX2(){
   busy = 1;
-  fs_error = f_mkfs(0, 0, 0);
+  fs_error = f_mkfs("", 0, 0);
   if (fs_error != FR_OK) report_fatfs_error(fs_error,"");  
   sdcard_unmount();
   sdcard_attemptMountIfUnmounted();  
