@@ -17,6 +17,6 @@
       <code.declaration><![CDATA[uint32_t Phase;]]></code.declaration>
       <code.init><![CDATA[Phase = 0;]]></code.init>
       <code.krate><![CDATA[Phase += inlet_freq;
-outlet_out= sinet[Phase>>22]<<12;]]></code.krate>
+outlet_out= sine2t[Phase>>20]>>4;]]></code.krate>
    </obj.normal>
 </objdefs>
