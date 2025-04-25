@@ -15,7 +15,7 @@
       </params>
       <attribs>
          <combo attributeName="poly" selection="12"/>
-         <combo attributeName="midichannel" selection="0"/>
+         <combo attributeName="midichannel" selection="inherit"/>
          <combo attributeName="mididevice" selection="omni"/>
          <combo attributeName="midiport" selection="omni"/>
       </attribs>
