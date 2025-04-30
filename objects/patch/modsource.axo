@@ -19,10 +19,10 @@ Set &quot;Number of Modulation Sources&quot; and &quot;Number of Targets per Sou
 ]]></code.declaration>
       <code.krate><![CDATA[if ((inlet_trig) && !ntrig) {
 	PExModulationSourceChange(
-		&parent->GetModulationTable()[parent->MODULATOR_attr_name * NMODULATIONTARGETS],
+		&parent->GetModulationTable()[parent->MODULATOR_CGENATTR_instancename * NMODULATIONTARGETS],
 		NMODULATIONTARGETS,
 		&parent->PExch[0],
-		&parent->PExModulationPrevVal[parent->polyIndex][parent->MODULATOR_attr_name],
+		&parent->PExModulationPrevVal[parent->polyIndex][parent->MODULATOR_CGENATTR_instancename],
 		inlet_v);
 
 	ntrig = 1;

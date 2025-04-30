@@ -53,7 +53,7 @@ if (nhooked) {
 	if (param_cache != param_value) 
 		nhooked = 4;
 	else
-		PExParameterChange(&parent->PExch[PARAM_INDEX_attr_legal_name_value],inlet_in,0xFFFD);
+		PExParameterChange(&parent->PExch[PARAM_INDEX_CGENATTR_legalname_value],inlet_in,0xFFFD);
 		param_cache = inlet_in;
 }
 outlet_hooked = !nhooked;]]></code.krate>
