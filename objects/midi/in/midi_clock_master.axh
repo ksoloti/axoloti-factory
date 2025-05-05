@@ -1,64 +1,62 @@
-<patch-1.0>
+<patch-1.0 appVersion="1.0.12">
    <comment type="patch/comment" x="98" y="28" text="todo: BPM dial"/>
-   <obj type="ctrl/toggle" sha="a104f377191a424d537741cdfd7d5348bc16590c" name="cb1_1" x="14" y="56">
+   <obj type="ctrl/toggle" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="cb1_1" x="14" y="56">
       <params>
          <bool32.tgl name="b" value="1"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="clockgen" sha="b1a8f7267317fa583225dc218f285fe306220d1b" name="clockgen_1" x="98" y="56">
+   <obj type="midi/intern/clock" uuid="7f6f35e92d2c29e950af2b3af5cebb2e9e3b778c" name="clock_1" x="98" y="56">
       <params>
          <frac32.u.map name="bpm" value="32.0"/>
       </params>
-      <attribs>
-         <combo attributeName="device" selection="din"/>
-      </attribs>
+      <attribs/>
    </obj>
-   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_1" x="238" y="56">
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="dispb_1" x="238" y="56">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/divremc" sha="a9507fb906b40fc4885ac66c9e4b34b840e8164d" name="divremc_2" x="238" y="112">
+   <obj type="math/divremc" uuid="fd7d945542e16344358136d7e22cffd5be704260" name="divremc_2" x="238" y="112">
       <params/>
       <attribs>
          <spinner attributeName="denominator" value="6"/>
       </attribs>
    </obj>
-   <obj type="disp/ibar 16" sha="6202b6944fb6704b4fcdfb66663aba8e11d266d4" name="ibar16_5" x="434" y="112">
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar16_5" x="434" y="112">
       <params/>
       <attribs/>
    </obj>
-   <obj type="ctrl/button" sha="15ee4f76478131dcc3e0ff8d36be5480bdb1b7d4" name="cb1m_1" x="14" y="126">
+   <obj type="ctrl/button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" name="cb1m_1" x="14" y="126">
       <params>
          <bool32.mom name="b" value="0"/>
       </params>
       <attribs/>
    </obj>
    <comment type="patch/comment" x="658" y="126" text="6 counts per 16th"/>
-   <obj type="math/divremc" sha="a9507fb906b40fc4885ac66c9e4b34b840e8164d" name="divremc_3" x="238" y="182">
+   <obj type="math/divremc" uuid="fd7d945542e16344358136d7e22cffd5be704260" name="divremc_3" x="238" y="182">
       <params/>
       <attribs>
          <spinner attributeName="denominator" value="16"/>
       </attribs>
    </obj>
-   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="16th" x="392" y="182">
+   <obj type="disp/i" uuid="5e35fd0c62d81e70017289250cf28edd26e19e4a" name="16th" x="392" y="182">
       <params/>
       <attribs/>
    </obj>
-   <obj type="disp/ibar 16" sha="6202b6944fb6704b4fcdfb66663aba8e11d266d4" name="ibar16_6" x="434" y="182">
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar16_6" x="434" y="182">
       <params/>
       <attribs/>
    </obj>
    <comment type="patch/comment" x="658" y="210" text="16 per bar"/>
-   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="measure" x="392" y="252">
+   <obj type="disp/i" uuid="5e35fd0c62d81e70017289250cf28edd26e19e4a" name="measure" x="392" y="252">
       <params/>
       <attribs/>
    </obj>
-   <obj type="disp/ibar 16" sha="6202b6944fb6704b4fcdfb66663aba8e11d266d4" name="ibar16_3" x="434" y="252">
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar16_3" x="434" y="252">
       <params/>
       <attribs/>
    </obj>
-   <obj type="disp/ibar 16" sha="6202b6944fb6704b4fcdfb66663aba8e11d266d4" name="ibar16_4" x="630" y="252">
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar16_4" x="630" y="252">
       <params/>
       <attribs/>
    </obj>
@@ -87,20 +85,20 @@
          <dest obj="measure" inlet="in"/>
       </net>
       <net>
-         <source obj="clockgen_1" outlet="pos24ppq"/>
+         <source obj="clock_1" outlet="pos24ppq"/>
          <dest obj="divremc_2" inlet="a"/>
       </net>
       <net>
-         <source obj="clockgen_1" outlet="active"/>
+         <source obj="clock_1" outlet="active"/>
          <dest obj="dispb_1" inlet="in"/>
       </net>
       <net>
          <source obj="cb1_1" outlet="o"/>
-         <dest obj="clockgen_1" inlet="run"/>
+         <dest obj="clock_1" inlet="run"/>
       </net>
       <net>
          <source obj="cb1m_1" outlet="o"/>
-         <dest obj="clockgen_1" inlet="rst"/>
+         <dest obj="clock_1" inlet="rst"/>
       </net>
    </nets>
    <settings>
@@ -108,8 +106,8 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>0</x>
-      <y>2</y>
+      <x>172</x>
+      <y>118</y>
       <width>1164</width>
       <height>590</height>
    </windowPos>
