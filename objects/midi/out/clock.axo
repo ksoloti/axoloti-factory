@@ -72,7 +72,7 @@ if (inlet_run && !_active) {
 }if (_active) {
   _posfrac += param_bpm;
   if (_posfrac & 1<<31) {
-    _posfrac &= (1<<31)-1;
+    _posfrac &= INT32_MAX;
     _pos24ppq++;
     MidiSend1((midi_device_t) attr_device,MIDI_TIMING_CLOCK);
   }
