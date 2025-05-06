@@ -100,7 +100,7 @@
       </params>
       <attribs/>
    </obj>
-   <obj type="dac~" sha="c27566f972d15f25252f61b5cff014a3edce9706" name="dac_1" x="1120" y="620">
+   <obj type="audio/out stereo" sha="c27566f972d15f25252f61b5cff014a3edce9706" name="dac_1" x="1120" y="620">
       <params/>
       <attribs/>
    </obj>
