@@ -20,6 +20,9 @@ To activate, turn on confirm1 and click confirm2.</sDescription>
 bool pconfirm;
 bool busy;
 bool ready;
+bool busy_blink;
+
+uint32_t busy_counter;
 
 msg_t ThreadX2(){
   busy = 1;
@@ -50,7 +53,16 @@ if (ready){
 	pThd = 0;
 }
 
-disp_busy=busy;
+if (busy && (busy_counter % 1024 == 0)) {
+	busy_blink = !busy_blink;
+}
+else if (!busy) {
+   busy_blink =  false;
+}
+busy_counter++;
+
+
+disp_busy=busy_blink;
 disp_succeeded=ready && (fs_error == FR_OK);
 disp_failed=ready && (fs_error != FR_OK);]]></code.krate>
    </obj.normal>
