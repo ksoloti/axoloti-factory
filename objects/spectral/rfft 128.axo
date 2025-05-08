@@ -78,7 +78,7 @@ state = 0;
                     NORMALPRIO, (tfunc_t)ThreadX, (void *)this);
 ]]></code.init>
       <code.dispose><![CDATA[chThdTerminate(Thd);
-]]></code.dispose>
+chThdWait(Thd);]]></code.dispose>
       <code.krate><![CDATA[if (state<128){
    int i;
    for(i=0;i<16;i++)
