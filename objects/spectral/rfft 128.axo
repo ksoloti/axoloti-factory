@@ -64,6 +64,7 @@ msg_t ThreadX2(){
           state = 129;
         }
       }
+      chThdExit((msg_t)0);
 }
 static msg_t ThreadX(void *arg) {
 ((attr_parent *)arg)->ThreadX2();
