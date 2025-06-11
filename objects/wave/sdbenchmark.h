@@ -1,3 +1,6 @@
+#ifndef WAVE_SD_BENCHMARK_H_
+#define WAVE_SD_BENCHMARK_H_
+
 #include "../chibios/ext/fatfs/src/ff.h"
 #include "../chibios/os/various/chprintf.c"
 
@@ -139,3 +142,5 @@ static WORKING_AREA(waThreadSD0, 1024) __attribute__ ((section (".data")));
 void sdbenchmark(void){
   sdStreams[0].pThreadSD = chThdCreateStatic(waThreadSD0, sizeof(waThreadSD0), NORMALPRIO, (tfunc_t)ThreadBenchmarkSD, NULL);
 }
+
+#endif /* WAVE_SD_BENCHMARK_H_ */

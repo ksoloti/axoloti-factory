@@ -1,3 +1,5 @@
+#ifndef FILTER_FILTERS_H_
+#define FILTER_FILTERS_H_
 
 const q31_t armRecipTableQ31[64] = {
   0x7F03F03F, 0x7D137420, 0x7B31E739, 0x795E9F94, 0x7798FD29, 0x75E06928,
@@ -90,3 +92,5 @@ void f_filter_biquad_A2(data_filter_biquad_A *v,const int32_t *sourcebuf,int32_t
     destbufcopy[7] = a0_inv_q31_x2_v2>>10;
     */
 }
+
+#endif /* FILTER_FILTERS_H_ */

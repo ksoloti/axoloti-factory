@@ -1,3 +1,6 @@
+#ifndef WAVE_LOOPER_H_
+#define WAVE_LOOPER_H_
+
 #include "ff.h"
 
 const int SDREADFILEPINGPONGSIZE = 1024;
@@ -233,5 +236,4 @@ int16_t * sdWriteStream(sdFilePingpongRW *s) {
   return p;
 }
 
-
-
+#endif /* WAVE_LOOPER_H_ */
