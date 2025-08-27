@@ -8,7 +8,7 @@
   <obj type="wave/flashplay" uuid="595422aa-8767-45a8-ae08-bd8ac0247c61" name="flashplay_1" x="168" y="28">
     <params/>
     <attribs>
-      <combo attributeName="sample" selection="rockwehrmann"/>
+      <combo attributeName="sample" selection="808snare"/>
     </attribs>
   </obj>
   <obj type="filter/fdbkcomb" uuid="b252513db2f8cc9a8964bad2a8eb7922be08690f" name="fdbkcomb1" x="168" y="126">
