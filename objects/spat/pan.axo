@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>pan.axh</helpPatch>
       <inlets>
-         <frac32 name="i1" description="input"/>
+         <frac32 name="i1" description="input" noLabel="true"/>
       </inlets>
       <outlets>
          <frac32 name="left" description="output"/>
@@ -26,7 +26,7 @@
       <license>BSD</license>
       <helpPatch>pan.axh</helpPatch>
       <inlets>
-         <frac32buffer name="i1" description="input"/>
+         <frac32buffer name="i1" description="input" noLabel="true"/>
       </inlets>
       <outlets>
          <frac32buffer name="left" description="output"/>

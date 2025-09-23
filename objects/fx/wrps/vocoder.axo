@@ -16,7 +16,7 @@ modified for 48kHz operation</sDescription>
          <frac32.bipolar name="formant"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out"/>
+         <frac32buffer name="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>note.axh</helpPatch>
       <inlets>
-         <frac32.bipolar name="in" description="input"/>
+         <frac32.bipolar name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays>

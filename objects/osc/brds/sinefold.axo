@@ -9,7 +9,7 @@
          <frac32 name="timbre"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="sine wave"/>
+         <frac32buffer.bipolar name="wave" description="sine wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

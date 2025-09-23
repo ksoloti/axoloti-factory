@@ -10,7 +10,7 @@
          <bool32.rising name="stop" description="stop trigger"/>
       </inlets>
       <outlets>
-         <int32 name="t" description="time interval in k-rate ticks (0.333ms)"/>
+         <int32 name="t" description="time interval in k-rate ticks (0.333ms)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

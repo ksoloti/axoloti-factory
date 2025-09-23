@@ -5,7 +5,7 @@
       <license>BSD</license>
       <inlets/>
       <outlets>
-         <int32.positive name="index" description="patch index, starting from zero"/>
+         <int32.positive name="index" description="patch index, starting from zero" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

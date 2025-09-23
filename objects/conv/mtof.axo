@@ -5,10 +5,10 @@
       <license>BSD</license>
       <helpPatch>mtof.axh</helpPatch>
       <inlets>
-         <frac32 name="pitch" description="chromatic note"/>
+         <frac32 name="pitch" description="chromatic note" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="frequency" description="frequency"/>
+         <frac32 name="frequency" description="frequency" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

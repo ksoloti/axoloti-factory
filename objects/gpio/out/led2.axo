@@ -5,7 +5,7 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <bool32 name="in" description="true = on"/>
+         <bool32 name="in" description="true = on" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>

@@ -7,10 +7,10 @@ A 1024 sample impulse response results in 66% load!</sDescription>
       <license>BSD</license>
       <helpPatch>convolution.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="input"/>
+         <frac32buffer name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="output"/>
+         <frac32buffer name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

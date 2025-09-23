@@ -4,10 +4,10 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <bool32.rising name="trig" description="trigger"/>
+         <bool32.rising name="trig" description="trigger" noLabel="true"/>
       </inlets>
       <outlets>
-         <int32 name="v" description="random value"/>
+         <int32 name="v" description="random value" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

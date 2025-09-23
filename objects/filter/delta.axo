@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>filter.axh</helpPatch>
       <inlets>
-         <frac32 name="a" description="a"/>
+         <frac32 name="a" description="a" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="d" description="a(t) - a(t-1)"/>
+         <frac32 name="d" description="a(t) - a(t-1)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -29,10 +29,10 @@
       <license>BSD</license>
       <helpPatch>filter.axh</helpPatch>
       <inlets>
-         <frac32buffer name="a" description="a"/>
+         <frac32buffer name="a" description="a" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="d" description="a(t) - a(t-1)"/>
+         <frac32buffer name="d" description="a(t) - a(t-1)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -52,10 +52,10 @@
       <license>BSD</license>
       <helpPatch>filter.axh</helpPatch>
       <inlets>
-         <int32 name="a" description="a"/>
+         <int32 name="a" description="a" noLabel="true"/>
       </inlets>
       <outlets>
-         <int32 name="d" description="a(t) - a(t-1)"/>
+         <int32 name="d" description="a(t) - a(t-1)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

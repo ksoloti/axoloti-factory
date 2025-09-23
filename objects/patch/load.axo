@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>load.axh</helpPatch>
       <inlets>
-         <bool32.rising name="trig" description="trigger"/>
+         <bool32.rising name="trig" description="trigger" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>

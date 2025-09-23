@@ -5,7 +5,7 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <frac32 name="outlet" description="outlet"/>
+         <frac32 name="outlet" description="outlet" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>

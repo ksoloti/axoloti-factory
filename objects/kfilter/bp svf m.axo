@@ -10,7 +10,7 @@
          <frac32 name="reso" description="resonance input"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="filter output"/>
+         <frac32 name="out" description="filter output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

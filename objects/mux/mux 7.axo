@@ -16,7 +16,7 @@
          <int32.positive name="s" description="select"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="output"/>
+         <frac32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -50,7 +50,7 @@
          <int32.positive name="s" description="select"/>
       </inlets>
       <outlets>
-         <int32 name="o" description="output"/>
+         <int32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -84,7 +84,7 @@
          <int32.positive name="s" description="select"/>
       </inlets>
       <outlets>
-         <frac32buffer name="o" description="output"/>
+         <frac32buffer name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -118,7 +118,7 @@
          <int32.positive name="s" description="select"/>
       </inlets>
       <outlets>
-         <bool32 name="o" description="output"/>
+         <bool32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -152,7 +152,7 @@
          <int32.positive name="s" description="select"/>
       </inlets>
       <outlets>
-         <charptr32 name="o" description="output"/>
+         <charptr32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

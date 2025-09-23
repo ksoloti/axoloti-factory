@@ -7,7 +7,7 @@ over 7 octaves. Range -64..64</sDescription>
       <license>BSD</license>
       <inlets/>
       <outlets>
-         <frac32.bipolar name="out" description="pink noise"/>
+         <frac32.bipolar name="out" description="pink noise" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

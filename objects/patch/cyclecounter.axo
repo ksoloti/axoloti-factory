@@ -6,7 +6,7 @@
       <helpPatch>cyclecounter.axh</helpPatch>
       <inlets/>
       <outlets>
-         <int32 name="t" description="cpu time in ticks"/>
+         <int32 name="t" description="cpu time in ticks" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

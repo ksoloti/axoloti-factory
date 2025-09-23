@@ -11,7 +11,7 @@
          <frac32buffer name="sync"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="sine wave"/>
+         <frac32buffer.bipolar name="wave" description="sine wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -8,10 +8,10 @@ http://mutable-instruments.com</sDescription>
       <author>Mark Harris</author>
       <license>GPL</license>
       <inlets>
-         <frac32buffer name="in"/>
+         <frac32buffer name="in" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out"/>
+         <frac32buffer name="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

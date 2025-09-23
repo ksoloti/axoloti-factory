@@ -10,7 +10,7 @@
          <bool32 name="en" description="enable"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="output"/>
+         <frac32 name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

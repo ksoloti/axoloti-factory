@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>delay.axh</helpPatch>
       <inlets>
-         <frac32 name="time" description="delay time (fraction of total delayline size)"/>
+         <frac32 name="time" description="delay time (fraction of total delayline size)" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="wave"/>
+         <frac32buffer name="out" description="wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>
@@ -30,10 +30,10 @@
       <license>BSD</license>
       <helpPatch>delay.axh</helpPatch>
       <inlets>
-         <frac32buffer name="time" description="delay time (fraction of total delayline size)"/>
+         <frac32buffer name="time" description="delay time (fraction of total delayline size)" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="wave"/>
+         <frac32buffer name="out" description="wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

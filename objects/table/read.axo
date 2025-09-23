@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>table.axh</helpPatch>
       <inlets>
-         <int32.positive name="a" description="index"/>
+         <int32.positive name="a" description="index" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="table[a]"/>
+         <frac32 name="o" description="table[a]" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -26,10 +26,10 @@
       <license>BSD</license>
       <helpPatch>table.axh</helpPatch>
       <inlets>
-         <frac32.positive name="a" description="index in fraction of table size"/>
+         <frac32.positive name="a" description="index in fraction of table size" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="table[a]"/>
+         <frac32 name="o" description="table[a]" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -46,10 +46,10 @@
       <license>BSD</license>
       <helpPatch>table.axh</helpPatch>
       <inlets>
-         <frac32buffer.positive name="a" description="index in fraction of table size"/>
+         <frac32buffer.positive name="a" description="index in fraction of table size" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="o" description="table[a]"/>
+         <frac32buffer name="o" description="table[a]" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

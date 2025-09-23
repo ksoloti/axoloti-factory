@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>pulse.axh</helpPatch>
       <inlets>
-         <bool32.rising name="trig" description="trigger"/>
+         <bool32.rising name="trig" description="trigger" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer.positive name="out" description="lfs burst"/>
+         <frac32buffer.positive name="out" description="lfs burst" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

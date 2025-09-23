@@ -6,7 +6,7 @@
       <license>BSD</license>
       <inlets/>
       <outlets>
-         <int32 name="v" description="v"/>
+         <int32 name="v" description="v" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

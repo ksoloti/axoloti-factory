@@ -20,6 +20,6 @@
         <inlet a="pulselengthm" b="pulselength"/>
     </inlets>
     <outlets>
-        <outlet a="out" b="o"/>
-    </outlets>
+        <outlet a="out" b="o" noLabel="true"/>
+      </outlets>
 </synonyms>

@@ -12,7 +12,7 @@ Sync resets oscillator phase on rising zero-crossing</sDescription>
          <frac32buffer name="sync" description="sync, resets phase on rising zero-crossing"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="square wave, anti-aliased"/>
+         <frac32buffer.bipolar name="wave" description="square wave, anti-aliased" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

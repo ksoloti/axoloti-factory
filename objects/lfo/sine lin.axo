@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>lfo.axh</helpPatch>
       <inlets>
-         <frac32 name="freq" description="phase increment"/>
+         <frac32 name="freq" description="phase increment" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32.bipolar name="out" description="sine wave LFO, cheap and bad quality"/>
+         <frac32.bipolar name="out" description="sine wave LFO, cheap and bad quality" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

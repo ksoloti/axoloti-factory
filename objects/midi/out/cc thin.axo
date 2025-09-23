@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>midi_out.axh</helpPatch>
       <inlets>
-         <frac32.positive name="v" description="value"/>
+         <frac32.positive name="v" description="value" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>

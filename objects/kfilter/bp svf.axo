@@ -5,10 +5,10 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <frac32 name="in" description="filter input"/>
+         <frac32 name="in" description="filter input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="filter output"/>
+         <frac32 name="out" description="filter output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

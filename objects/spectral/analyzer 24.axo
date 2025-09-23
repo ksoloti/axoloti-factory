@@ -7,7 +7,7 @@
       <helpPatch>analyzer 24.axh</helpPatch>
       <rotatedParams>true</rotatedParams>
       <inlets>
-         <frac32buffer name="in" description="input"/>
+         <frac32buffer name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays>

@@ -7,7 +7,7 @@
       <helpPatch>math.axh</helpPatch>
       <inlets/>
       <outlets>
-         <int32 name="o" description="output"/>
+         <int32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

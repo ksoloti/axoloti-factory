@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>filter.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="filter input"/>
+         <frac32buffer name="in" description="filter input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="filter output"/>
+         <frac32buffer name="out" description="filter output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

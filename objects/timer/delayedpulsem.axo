@@ -10,7 +10,7 @@
          <frac32.bipolar name="delay" description="delay modulation"/>
       </inlets>
       <outlets>
-         <bool32.pulse name="pulse" description="pulse output"/>
+         <bool32.pulse name="pulse" description="pulse output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -10,7 +10,7 @@ Bandwith limited</sDescription>
          <frac32.bipolar name="pw" description="pulse width. Zero corresponds to 50% duty cycle."/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="pwm wave, anti-aliased"/>
+         <frac32buffer.bipolar name="wave" description="pwm wave, anti-aliased" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

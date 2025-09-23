@@ -7,7 +7,7 @@ Range -64..64</sDescription>
       <helpPatch>gaussian.axh</helpPatch>
       <inlets/>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="white noise"/>
+         <frac32buffer.bipolar name="wave" description="white noise" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

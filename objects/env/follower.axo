@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>env.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="input wave"/>
+         <frac32buffer name="in" description="input wave" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32.positive name="amp" description="amplitude"/>
+         <frac32.positive name="amp" description="amplitude" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

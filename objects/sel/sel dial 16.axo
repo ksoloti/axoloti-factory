@@ -5,10 +5,10 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <int32 name="s" description="select"/>
+         <int32 name="s" description="select" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="output"/>
+         <frac32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

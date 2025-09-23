@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>trigonometry.axh</helpPatch>
       <inlets>
-         <frac32 name="phase" description="phase"/>
+         <frac32 name="phase" description="phase" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="sin(phase)"/>
+         <frac32 name="out" description="sin(phase)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -26,10 +26,10 @@
       <license>BSD</license>
       <helpPatch>trigonometry.axh</helpPatch>
       <inlets>
-         <frac32buffer name="phase" description="phase"/>
+         <frac32buffer name="phase" description="phase" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="sin(phase)"/>
+         <frac32buffer name="out" description="sin(phase)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

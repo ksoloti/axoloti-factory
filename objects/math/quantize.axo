@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32 name="a" description="a"/>
+         <frac32 name="a" description="a" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="b" description="quant(a)"/>
+         <frac32 name="b" description="quant(a)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -26,10 +26,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32buffer name="a" description="a"/>
+         <frac32buffer name="a" description="a" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="b" description="quant(a)"/>
+         <frac32buffer name="b" description="quant(a)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

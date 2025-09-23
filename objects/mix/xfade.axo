@@ -10,7 +10,7 @@
          <frac32.positive name="c" description="control"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="output"/>
+         <frac32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -33,7 +33,7 @@
          <frac32buffer.positive name="c" description="control"/>
       </inlets>
       <outlets>
-         <frac32buffer name="o" description="output"/>
+         <frac32buffer name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -56,7 +56,7 @@
          <frac32.positive name="c" description="control"/>
       </inlets>
       <outlets>
-         <frac32buffer name="o" description="output"/>
+         <frac32buffer name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

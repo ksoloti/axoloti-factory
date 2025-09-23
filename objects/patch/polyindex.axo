@@ -7,7 +7,7 @@
       <helpPatch>polyindex.axh</helpPatch>
       <inlets/>
       <outlets>
-         <int32.positive name="index" description="index from 0 to n-1"/>
+         <int32.positive name="index" description="index from 0 to n-1" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

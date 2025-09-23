@@ -11,7 +11,7 @@ Bandwith limited</sDescription>
          <frac32buffer name="sync" description="sync, resets oscillator phase on rising zero-crossing"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="saw wave, anti-aliased"/>
+         <frac32buffer.bipolar name="wave" description="saw wave, anti-aliased" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

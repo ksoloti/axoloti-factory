@@ -6,10 +6,10 @@ Single-shot playback of a sample table in flash, without transposition.</sDescri
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <bool32.rising name="trig" description="trigger"/>
+         <bool32.rising name="trig" description="trigger" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="wave"/>
+         <frac32buffer name="out" description="wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

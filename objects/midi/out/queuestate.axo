@@ -7,7 +7,7 @@
       <helpPatch>midi_out.axh</helpPatch>
       <inlets/>
       <outlets>
-         <int32 name="length" description="number of pending bytes in queue"/>
+         <int32 name="length" description="number of pending bytes in queue" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

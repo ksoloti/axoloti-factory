@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>pulse.axh</helpPatch>
       <inlets>
-         <bool32.risingfalling name="gate" description="gate"/>
+         <bool32.risingfalling name="gate" description="gate" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer.positive name="env" description="envelope output"/>
+         <frac32buffer.positive name="env" description="envelope output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

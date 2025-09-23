@@ -6,7 +6,7 @@ at a fixed frequency of 97.65 Hz</sDescription>
       <license>BSD</license>
       <helpPatch>pwm.axh</helpPatch>
       <inlets>
-         <frac32.positive name="pa5" description="pwm ratio"/>
+         <frac32.positive name="pa5" description="pwm ratio" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>

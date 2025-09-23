@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32 name="in" description="in"/>
+         <frac32 name="in" description="in" noLabel="true"/>
       </inlets>
       <outlets>
-         <bool32 name="out" description="out"/>
+         <bool32 name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

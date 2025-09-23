@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32.positive name="phase" description="phase"/>
+         <frac32.positive name="phase" description="phase" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32.positive name="win" description="w(phase)"/>
+         <frac32.positive name="win" description="w(phase)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -27,10 +27,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32buffer name="phase" description="phase"/>
+         <frac32buffer name="phase" description="phase" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="win" description="w(phase)"/>
+         <frac32buffer name="win" description="w(phase)" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

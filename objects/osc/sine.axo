@@ -10,7 +10,7 @@
          <frac32buffer name="phase" description="phase"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="wave" description="sine wave"/>
+         <frac32buffer.bipolar name="wave" description="sine wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

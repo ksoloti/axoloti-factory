@@ -5,10 +5,10 @@
       <author>Johannes Taelman</author>
       <license>BSD</license>
       <inlets>
-         <frac32buffer name="pos" description="position"/>
+         <frac32buffer name="pos" description="position" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="o" description="output"/>
+         <frac32buffer name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

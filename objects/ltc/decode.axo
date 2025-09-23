@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>decode.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="ltc input"/>
+         <frac32buffer name="in" description="ltc input" noLabel="true"/>
       </inlets>
       <outlets>
          <int32 name="h" description="hours"/>

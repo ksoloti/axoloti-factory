@@ -10,7 +10,7 @@
          <frac32 name="in2" description="in2"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="out"/>
+         <frac32 name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -28,7 +28,7 @@
          <frac32buffer name="in2" description="in2"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="out"/>
+         <frac32buffer name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -46,7 +46,7 @@
          <int32 name="in2" description="in2"/>
       </inlets>
       <outlets>
-         <int32 name="out" description="out"/>
+         <int32 name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

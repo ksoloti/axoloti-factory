@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32.positive name="a" description="input"/>
+         <frac32.positive name="a" description="input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="result" description="output"/>
+         <frac32 name="result" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -28,10 +28,10 @@ else outlet_result = expt[ei]>>(-s);
       <license>BSD</license>
       <helpPatch>math.axh</helpPatch>
       <inlets>
-         <frac32buffer.positive name="a" description="input"/>
+         <frac32buffer.positive name="a" description="input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="result" description="output"/>
+         <frac32buffer name="result" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

@@ -10,7 +10,7 @@
          <frac32 name="s_h" description="pass through when less or equal than zero or hold when positive"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="output"/>
+         <frac32 name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -35,7 +35,7 @@ outlet_out = hold;
          <frac32buffer name="s_h" description="pass through when less or equal than zero or hold when positive"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="output"/>
+         <frac32buffer name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

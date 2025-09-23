@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>pulselength.axh</helpPatch>
       <inlets>
-         <bool32.rising name="trig" description="trigger"/>
+         <bool32.rising name="trig" description="trigger" noLabel="true"/>
       </inlets>
       <outlets>
-         <bool32 name="pulse" description="pulse output"/>
+         <bool32 name="pulse" description="pulse output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>disp.axh</helpPatch>
       <inlets>
-         <frac32 name="in" description="input"/>
+         <frac32 name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays>
@@ -24,7 +24,7 @@
       <license>BSD</license>
       <helpPatch>disp.axh</helpPatch>
       <inlets>
-         <int32 name="in" description="input"/>
+         <int32 name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays>
@@ -42,7 +42,7 @@
       <license>BSD</license>
       <helpPatch>disp.axh</helpPatch>
       <inlets>
-         <charptr32 name="in" description="input"/>
+         <charptr32 name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays>

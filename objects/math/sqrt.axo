@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>sqrt.axh</helpPatch>
       <inlets>
-         <frac32 name="in" description="in"/>
+         <frac32 name="in" description="in" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="out" description="out"/>
+         <frac32 name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -28,10 +28,10 @@ outlet_out= (int)aif;
       <license>BSD</license>
       <helpPatch>sqrt.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="in"/>
+         <frac32buffer name="in" description="in" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="out"/>
+         <frac32buffer name="out" description="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

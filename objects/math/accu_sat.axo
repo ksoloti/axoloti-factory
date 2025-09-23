@@ -11,7 +11,7 @@
          <bool32.rising name="rst" description="reset"/>
       </inlets>
       <outlets>
-         <frac32 name="o" description="output"/>
+         <frac32 name="o" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

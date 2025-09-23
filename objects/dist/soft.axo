@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>soft.axh</helpPatch>
       <inlets>
-         <frac32 name="in" description="input"/>
+         <frac32 name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32.bipolar name="out" description="output"/>
+         <frac32.bipolar name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>
@@ -27,10 +27,10 @@ outlet_out = ts + (ts>>1) - (tsq31p3);
       <license>BSD</license>
       <helpPatch>soft.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="audio input"/>
+         <frac32buffer name="in" description="audio input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer.bipolar name="out" description="audio output"/>
+         <frac32buffer.bipolar name="out" description="audio output" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

@@ -17,7 +17,7 @@ http://mutable-instruments.com</sDescription>
          <frac32.bipolar name="gain"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out"/>
+         <frac32buffer name="out" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

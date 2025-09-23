@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>delay.axh</helpPatch>
       <inlets>
-         <frac32 name="pitch" description="phase increment"/>
+         <frac32 name="pitch" description="phase increment" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32 name="delay" description="delay time"/>
+         <frac32 name="delay" description="delay time" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -6,7 +6,7 @@
       <license>BSD</license>
       <inlets/>
       <outlets>
-         <charptr32 name="inlet" description="inlet"/>
+         <charptr32 name="inlet" description="inlet" noLabel="true"/>
       </outlets>
       <displays/>
       <params/>

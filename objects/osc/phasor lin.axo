@@ -11,7 +11,7 @@ saw like wave with linear frequency input(goes all the way to 0)</sDescription>
          <frac32buffer.bipolar name="phase" description="phase"/>
       </inlets>
       <outlets>
-         <frac32buffer.positive name="phasor" description="phasor wave"/>
+         <frac32buffer.positive name="phasor" description="phasor wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

@@ -11,7 +11,7 @@
          <frac32.positive name="pos" description="start position in table"/>
       </inlets>
       <outlets>
-         <frac32buffer name="wave" description="wave"/>
+         <frac32buffer name="wave" description="wave" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

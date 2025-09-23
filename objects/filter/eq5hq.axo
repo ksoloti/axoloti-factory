@@ -6,10 +6,10 @@
       <license>BSD</license>
       <helpPatch>eq5hq.axh</helpPatch>
       <inlets>
-         <frac32buffer name="in" description="input"/>
+         <frac32buffer name="in" description="input" noLabel="true"/>
       </inlets>
       <outlets>
-         <frac32buffer name="out" description="output"/>
+         <frac32buffer name="out" description="output" noLabel="true"/>
       </outlets>
       <displays/>
       <params>

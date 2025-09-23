@@ -6,7 +6,7 @@
       <license>BSD</license>
       <helpPatch>led1.axh</helpPatch>
       <inlets>
-         <bool32 name="in" description="true = on"/>
+         <bool32 name="in" description="true = on" noLabel="true"/>
       </inlets>
       <outlets/>
       <displays/>
