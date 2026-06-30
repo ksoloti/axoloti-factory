@@ -1,5 +1,5 @@
 <patch-1.0>
-   <obj type="script2" sha="362a4413ceaefbe716480bf8f9c62eb3587fe6c0" name="script2_1" x="20" y="20">
+   <obj type="script/script2" sha="362a4413ceaefbe716480bf8f9c62eb3587fe6c0" name="script2_1" x="20" y="20">
       <params/>
       <attribs>
          <text attributeName="script">
