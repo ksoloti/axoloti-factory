@@ -1,56 +1,82 @@
-<objdefs appVersion="1.1.0">
-   <obj.normal id="format" uuid="511fcd12-757d-423b-a2d1-ffc46911b9d3">
-      <sDescription>SDCard formatting - ERASES ALL CONTENTS of the SDCard!
+<objdefs appVersion="1.2.0">
+  <obj.normal id="format" uuid="511fcd12-757d-423b-a2d1-ffc46911b9d3">
+    <sDescription>SDCard formatting - ERASES ALL CONTENTS of the SDCard!
 To activate, turn on confirm1 and click confirm2.</sDescription>
-      <author>Johannes Taelman, Ksoloti</author>
-      <license>BSD</license>
-      <inlets/>
-      <outlets/>
-      <displays>
-         <bool32 name="busy"/>
-         <bool32 name="succeeded"/>
-         <bool32 name="failed"/>
-      </displays>
-      <params>
-         <bool32.tgl name="confirm1"/>
-         <bool32.mom name="confirm2"/>
-      </params>
-      <attribs/>
-      <code.declaration><![CDATA[FRESULT fs_error = FR_OK;
-bool pconfirm;
-bool busy;
-bool ready;
+    <author>Johannes Taelman, Ksoloti</author>
+    <license>BSD</license>
+    <helpPatch></helpPatch>
+    <inlets/>
+    <outlets/>
+    <displays>
+      <bool32 name="busy"/>
+      <bool32 name="succeeded"/>
+      <bool32 name="failed"/>
+    </displays>
+    <params>
+      <bool32.tgl name="confirm1"/>
+      <bool32.mom name="confirm2"/>
+    </params>
+    <attribs/>
+    <code.declaration><![CDATA[FRESULT fs_error = FR_OK;
+MKFS_PARM opt = {
+	.fmt = FM_FAT32,     // Force FAT32 format
+	.n_fat = 2,          // Standard 2 FAT tables
+	.align = 0,          // Auto-align to card sector boundary
+	.n_root = 0,	    	 // Ignored in FAT32: Number of root directory entries
+	.au_size = 0,        // 0: auto-select allocation unit size
+};
+
+bool pconfirm = false;
+volatile bool busy;
+volatile bool ready;
 bool busy_blink;
 
 uint32_t busy_counter;
+uint8_t* work;
 
 msg_t ThreadX2(){
-  busy = 1;
-  fs_error = f_mkfs("", 0, 0);
-  if (fs_error != FR_OK) report_fatfs_error(fs_error,"");  
-  sdcard_unmount();
-  sdcard_attemptMountIfUnmounted();  
-  ready = 1;
-  chThdExit((msg_t)0);
+	busy = true;
+	ready = false;
+
+	sdcard_unmount();
+	chThdSleepMilliseconds(100);
+	sdcard_attemptMountIfUnmounted();  
+
+	fs_error = f_mkfs("", &opt, work, 4096);
+	if (fs_error != FR_OK) report_fatfs_error(fs_error, "");
+
+	sdcard_unmount();
+	chThdSleepMilliseconds(100);
+	sdcard_attemptMountIfUnmounted();  
+	
+	ready = true;
+	chThdExit((msg_t)0);
 }
 
 static msg_t ThreadX(void *arg) {
-((attr_parent *)arg)->ThreadX2();
+	((attr_parent *)arg)->ThreadX2();
+	return (msg_t)0;
 }
 
-WORKING_AREA(waThreadX, 1024);
-Thread *pThd=0;]]></code.declaration>
-      <code.krate><![CDATA[if (param_confirm1 && param_confirm2 && !pconfirm){
-	pconfirm = 1;
+WORKING_AREA(waThreadX, 2048);
+Thread *pThd;]]></code.declaration>
+    <code.init><![CDATA[static uint8_t _work[4096] __attribute__((section(".sram2"), aligned(4)));
+work = &_work[0];]]></code.init>
+    <code.dispose><![CDATA[if (pThd) {
+	chThdTerminate(pThd);
+	chThdWait(pThd);
+	pThd = NULL;
+}]]></code.dispose>
+    <code.krate><![CDATA[if (param_confirm1 && param_confirm2 && !pconfirm){
+	pconfirm = true;
 	pThd = chThdCreateStatic(waThreadX, sizeof(waThreadX),
-                    NORMALPRIO, (tfunc_t)ThreadX, (void *)this);
+                    HIGHPRIO-1, (tfunc_t)ThreadX, (void *)this);
 } else if (!param_confirm2){
-	pconfirm = 0;
+	pconfirm = false;
 }
 
 if (ready){
-	busy = 0;
-	pThd = 0;
+	busy = false;
 }
 
 if (busy && (busy_counter % 1024 == 0)) {
@@ -62,8 +88,8 @@ else if (!busy) {
 busy_counter++;
 
 
-disp_busy=busy_blink;
-disp_succeeded=ready && (fs_error == FR_OK);
-disp_failed=ready && (fs_error != FR_OK);]]></code.krate>
-   </obj.normal>
+disp_busy = busy_blink;
+disp_succeeded = ready && (fs_error == FR_OK);
+disp_failed = ready && (fs_error != FR_OK);]]></code.krate>
+  </obj.normal>
 </objdefs>
