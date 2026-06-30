@@ -1,9 +1,6 @@
 #ifndef WAVE_SD_BENCHMARK_H_
 #define WAVE_SD_BENCHMARK_H_
 
-#include "../chibios/ext/fatfs/src/ff.h"
-#include "../chibios/os/various/chprintf.c"
-
 #define SDREADFILEPINGPONGSIZE 2048
 typedef struct {
   union {
