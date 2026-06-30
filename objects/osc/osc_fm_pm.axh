@@ -1,35 +1,35 @@
-<patch-1.0>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc0_1_" x="28" y="28">
+<patch-1.0 appVersion="1.2.0">
+  <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="osc0_1_" x="28" y="28">
       <params>
          <frac32.s.map name="pitch" value="-16.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/*c" sha="d36ecbd55095f4888a0ebda8efda68e015c5e72b" name="*c2" x="154" y="28">
+  <obj type="math/*c" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="*c2" x="154" y="28">
       <params>
          <frac32.u.map name="amp" value="0.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/*c" sha="d36ecbd55095f4888a0ebda8efda68e015c5e72b" name="*c2_" x="154" y="112">
+  <obj type="math/*c" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="*c2_" x="154" y="112">
       <params>
          <frac32.u.map name="amp" value="0.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc0_1" x="280" y="112">
+  <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="osc0_1" x="280" y="112">
       <params>
          <frac32.s.map name="pitch" value="-16.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/*c" sha="d36ecbd55095f4888a0ebda8efda68e015c5e72b" name="*c1" x="406" y="112">
+  <obj type="math/*c" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="*c1" x="406" y="112">
       <params>
          <frac32.u.map name="amp" value="3.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="audio/out stereo" sha="b933bb91801a126126313c11f773158b5ca2face" name="dac_1" x="532" y="112">
+  <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="dac_1" x="532" y="112">
       <params/>
       <attribs/>
    </obj>
