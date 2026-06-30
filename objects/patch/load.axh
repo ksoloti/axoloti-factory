@@ -1,42 +1,45 @@
-<patch-1.0>
-   <obj type="osc~" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" name="osc_1" x="14" y="28">
-      <params>
-         <frac32.s.map name="pitch" value="0.0"/>
-      </params>
-      <attribs/>
-   </obj>
-   <obj type="audio/out left" sha="d26fce66143f96b96fa3df63ea01b45ff4b3bef7" name="dac_11" x="126" y="28">
-      <params/>
-      <attribs/>
-   </obj>
-   <obj type="gpio/in/button1" sha="9f82aa3e60711d7f7aaaef5c74234df79ae925c2" name="button11" x="14" y="168">
-      <params/>
-      <attribs/>
-   </obj>
-   <obj type="patch/load" sha="dfb6f545e11f28d876ca35293a6c83e87dc43438" name="load_1" x="126" y="168">
-      <params/>
-      <attribs>
-         <table attributeName="filename" table="load2.bin"/>
-      </attribs>
-   </obj>
-   <nets>
-      <net>
-         <source obj="osc_1" outlet="wave"/>
-         <dest obj="dac_11" inlet="wave"/>
-      </net>
-      <net>
-         <source obj="button11" outlet="out"/>
-         <dest obj="load_1" inlet="trig"/>
-      </net>
-   </nets>
-   <settings>
-      <subpatchmode>no</subpatchmode>
-   </settings>
-   <notes><![CDATA[]]></notes>
-   <windowPos>
-      <x>0</x>
-      <y>2</y>
-      <width>436</width>
-      <height>478</height>
-   </windowPos>
+<patch-1.0 appVersion="1.2.0">
+  <comment type="patch/comment" x="14" y="14" text="&lt;html&gt;&lt;h3&gt;Upload both this patch (load.axh) and load_2.axh to SD card &lt;i&gt;(Patch -&gt; Upload to SD Card)&lt;/i&gt;&lt;br&gt;While patch is live, press button S1 to load the other patch (as is specified in the below patch/load object)"/>
+  <comment type="patch/comment" x="14" y="98" text="Triangle wave"/>
+  <obj type="osc/tri" uuid="905879afa8256b0ca207557d656949e476ca6f16" name="osc_1" x="14" y="112">
+    <params>
+      <frac32.s.map name="pitch" value="0.0"/>
+    </params>
+    <attribs/>
+  </obj>
+  <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out stereo_1" x="126" y="112">
+    <params/>
+    <attribs/>
+  </obj>
+  <obj type="gpio/in/button1" uuid="2f4fbacf3969a3a1ff9d23899566430051cb01f" name="button11" x="14" y="252">
+    <params/>
+    <attribs/>
+  </obj>
+  <obj type="patch/load" uuid="634bf1f8c313920d7f19fc402ba937fd1ee27802" name="load_1" x="126" y="252">
+    <params/>
+    <attribs>
+      <table attributeName="filename" table="/load_2/patch.bin"/>
+    </attribs>
+  </obj>
+  <nets>
+    <net>
+      <source obj="button11" outlet="out"/>
+      <dest obj="load_1" inlet="trig"/>
+    </net>
+    <net>
+      <source obj="osc_1" outlet="wave"/>
+      <dest obj="out stereo_1" inlet="left"/>
+      <dest obj="out stereo_1" inlet="right"/>
+    </net>
+  </nets>
+  <settings>
+    <subpatchmode>no</subpatchmode>
+  </settings>
+  <notes><![CDATA[]]></notes>
+  <windowPos>
+    <x>82</x>
+    <y>0</y>
+    <width>589</width>
+    <height>478</height>
+  </windowPos>
 </patch-1.0>
