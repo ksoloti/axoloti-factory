@@ -1,95 +1,104 @@
-<objdefs>
-   <obj.normal id="flashread interp" uuid="3bee14d4674a0d360d134757716120ffc29310a4" sha="5bf8648b0d5a5df01bb9d8aeb6f62cb164d7a6eb">
-      <upgradeSha>ee182884ff6601bedd6fe14e6f89cd89864e3b20</upgradeSha>
-      <sDescription>linear interpolated flash table read</sDescription>
-      <author>Johannes Taelman</author>
-      <license>BSD</license>
-      <inlets>
-         <frac32buffer name="pos" description="position" noLabel="true"/>
-      </inlets>
-      <outlets>
-         <frac32buffer name="o" description="output" noLabel="true"/>
-      </outlets>
-      <displays/>
-      <params/>
-      <attribs>
-         <combo name="sample">
-            <MenuEntries>
-               <string>808bd</string>
-               <string>808hatclose</string>
-               <string>808hatopen</string>
-               <string>808hitom</string>
-               <string>808midtom</string>
-               <string>808lotom</string>
-               <string>808snare</string>
-               <string>rockwehrmann</string>
-            </MenuEntries>
-            <CEntries>
-               <string>808bd</string>
-               <string>808hatclose</string>
-               <string>808hatopen</string>
-               <string>808hitom</string>
-               <string>808midtom</string>
-               <string>808lotom</string>
-               <string>808snare</string>
-               <string>rockwehrmann</string>
-            </CEntries>
-         </combo>
-         <combo name="size">
-            <MenuEntries>
-               <string>2</string>
-               <string>4</string>
-               <string>8</string>
-               <string>16</string>
-               <string>32</string>
-               <string>64</string>
-               <string>128</string>
-               <string>256</string>
-               <string>512</string>
-               <string>1024</string>
-               <string>2048</string>
-               <string>4096</string>
-               <string>8192</string>
-               <string>16384</string>
-               <string>32768</string>
-               <string>65536</string>
-            </MenuEntries>
-            <CEntries>
-               <string>1</string>
-               <string>2</string>
-               <string>3</string>
-               <string>4</string>
-               <string>5</string>
-               <string>6</string>
-               <string>7</string>
-               <string>8</string>
-               <string>9</string>
-               <string>10</string>
-               <string>11</string>
-               <string>12</string>
-               <string>13</string>
-               <string>14</string>
-               <string>15</string>
-               <string>16</string>
-            </CEntries>
-         </combo>
-      </attribs>
-      <code.declaration><![CDATA[static const uint32_t LENGTHPOW = (attr_size);
-static const uint32_t LENGTH = (1<<attr_size);
-static const uint32_t LENGTHMASK = ((1<<attr_size)-1);
-static const uint32_t BITS = 16;
+<objdefs appVersion="1.2.0">
+  <obj.normal id="flashread interp" uuid="3bee14d4674a0d360d134757716120ffc29310a4">
+    <sDescription>linear interpolated flash table read</sDescription>
+    <author>Johannes Taelman</author>
+    <license>BSD</license>
+    <helpPatch></helpPatch>
+    <inlets>
+      <frac32buffer name="pos" description="position" noLabel="true"/>
+    </inlets>
+    <outlets>
+      <frac32buffer name="o" description="output" noLabel="true"/>
+    </outlets>
+    <displays/>
+    <params/>
+    <attribs>
+      <combo name="sample">
+        <MenuEntries>
+          <string>808bd</string>
+          <string>808hatclose</string>
+          <string>808hatopen</string>
+          <string>808hitom</string>
+          <string>808midtom</string>
+          <string>808lotom</string>
+          <string>808snare</string>
+        </MenuEntries>
+        <CEntries>
+          <string>bd</string>
+          <string>hatclose</string>
+          <string>hatopen</string>
+          <string>hitom</string>
+          <string>midtom</string>
+          <string>lotom</string>
+          <string>snare</string>
+        </CEntries>
+      </combo>
+    </attribs>
+    <file-depends>
+      <file-depend localFilename="bd.raw" targetPath="/shared/808/bd.raw"/>
+      <file-depend localFilename="hatclose.raw" targetPath="/shared/808/hatclose.raw"/>
+      <file-depend localFilename="hatopen.raw" targetPath="/shared/808/hatopen.raw"/>
+      <file-depend localFilename="hitom.raw" targetPath="/shared/808/hitom.raw"/>
+      <file-depend localFilename="lotom.raw" targetPath="/shared/808/lotom.raw"/>
+      <file-depend localFilename="midtom.raw" targetPath="/shared/808/midtom.raw"/>
+      <file-depend localFilename="snare.raw" targetPath="/shared/808/snare.raw"/>
+    </file-depends>
+    <depends>
+      <depend>fatfs</depend>
+    </depends>
+    <code.declaration><![CDATA[static const uint32_t MAX_LENGTH = (1<<16);
 static const uint32_t GAIN = 12;
-]]></code.declaration>
-      <code.srate><![CDATA[extern int16_t _binary_attr_sample_raw_start;
-   uint32_t asat = __USAT(inlet_pos,27);
-    int index = asat>>(27-LENGTHPOW);
-   int32_t y1 = (((int16_t *)(&_binary_attr_sample_raw_start))[index])<<GAIN;
-   int32_t y2 = (((int16_t *)(&_binary_attr_sample_raw_start))[index+1])<<GAIN;
-   int frac = (asat - (index<<(27-LENGTHPOW)))<<(LENGTHPOW+3);
-  int32_t rr;
-  rr = ___SMMUL(y1,(1<<30)-frac);
-  rr = ___SMMLA(y2,frac,rr);
-outlet_o= rr<<2;
-]]></code.srate>
-   </obj.normal>
+
+int16_t *sample;
+uint32_t smp_length;]]></code.declaration>
+    <code.init><![CDATA[static int16_t _sample[MAX_LENGTH] __attribute__((section (".sdram")));
+sample = &_sample[0];
+FIL FileObject;
+FRESULT err;
+
+const char fn[] = "/shared/808/attr_sample.raw";
+err = f_open(&FileObject, fn, FA_READ | FA_OPEN_EXISTING);
+if (err != FR_OK) {
+	LogTextMessage("Open failed: %s",fn); 
+	// clear from start to array end
+	int i;
+	for(i=0;i<MAX_LENGTH;i++){
+		sample[i]=0;
+	}
+	return;
+}
+err = f_read(&FileObject, (char *)sample, sizeof(_sample), &smp_length);
+if (err != FR_OK) {LogTextMessage("Read failed\n"); return;}
+err = f_close(&FileObject);
+if (err != FR_OK) {LogTextMessage("Close failed\n"); return;}
+
+int i=smp_length/2; // 16 bit per sample
+// clear from file end to array end
+for(;i<MAX_LENGTH;i++){
+	sample[i]=0;
+}]]></code.init>
+    <code.srate><![CDATA[uint32_t asat = __USAT(inlet_pos, 27) << 4;
+
+uint64_t total_pos = (uint64_t)asat * (uint64_t)smp_length; /* Do multiplication in 64-bit space to prevent overflow */
+
+uint32_t index = (uint32_t)(total_pos >> 32); /* Extract the top 32-bits (Index)... */
+uint32_t frac = (uint32_t)(total_pos & 0xFFFFFFFF);  /* and bottom 32-bits (Fraction) */
+
+
+if (index >= smp_length - 1) { /* Guard against out-of-bounds */
+	outlet_o = ((int32_t)sample[smp_length - 1]) << GAIN;
+} else {
+	/* Fetch samples */
+	int32_t y1 = ((int32_t)sample[index]) << GAIN;
+	int32_t y2 = ((int32_t)sample[index + 1]) << GAIN;
+
+	/* Interpolate using SMMUL */
+	uint32_t frac_q31 = frac >> 1;
+	int32_t rr;
+	rr = ___SMMUL(y1, (1 << 31) - frac_q31);
+	rr = ___SMMLA(y2, frac_q31, rr);
+	
+	outlet_o = rr << 1; 
+}]]></code.srate>
+  </obj.normal>
 </objdefs>
